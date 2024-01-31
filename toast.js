@@ -2,7 +2,7 @@ const ToastBox = document.getElementById('toast');
 let Success = `<box-icon name='check-shield' animation='burst' color='#49c628' ></box-icon> Successful submit.`;
 let error = `<box-icon name= 'error' animation='tada' color='#ef2526' ></box-icon> Please Fix The Error!`;
 let message = `<box-icon name='message-error' animation='fade-down' color='#ffa500' ></box-icon> Please Check input Detail!`;
-let info = `<box-icon name='info-circle' animation='flshing' color='#1e90ff' ></box-icon> Your Given information.`;
+let info = `<box-icon name='info-circle' animation='flashing' color='#1e90ff' ></box-icon> Your Given information.`;
 
 function show(msg) {
   let ShowToast = document.createElement('div');
