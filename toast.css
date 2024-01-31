@@ -1,0 +1,90 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+
+body{
+  color: #F8F8FF;
+  background: #0c090a;
+}
+
+#buttons{
+  text-align: center;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+}
+#buttons button{
+ margin: .5rem;
+ padding: .8rem;
+ border: 0;
+ border-radius:.5rem ;
+ font-weight: 500;
+ font-size: 1rem;
+ cursor: pointer;
+}
+
+#toast{
+  width: 300px;
+  display: flex;
+  flex-direction: column; 
+  bottom: 20px;
+  right: 30px;
+  padding: 1rem;
+  align-items: flex-end;
+  position: absolute;
+  overflow: hidden;
+}
+.ShowToast{
+  width: 100%;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  font-weight: 500;
+  border: 0;
+  margin-top: 2rem;
+  color: #d2cfcf;
+  border-radius: .5rem;
+  background: #343234;
+  box-shadow: 0 0 12px #e5e4e2;
+  transform: translateX(100%);
+  animation: moveleft 0.5s linear forwards;
+}
+@keyframes moveleft {
+ 100%{
+  transform: translateX(0);
+ }
+}
+
+.ShowToast::after{
+  content:"";
+  height: 5px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background:#49C628;
+  position: absolute;
+  animation: anim 5s linear forwards;
+}
+@keyframes anim {
+  100%{
+    width: 0;
+  }
+}
+
+#toast box-icon{
+  margin: 0 15px;
+}
+
+.error::after{
+  background: #ea5455;
+}
+.info::after{
+  background: #1e90ff;
+}
+.message::after{
+  background: #ffa500;
+}
